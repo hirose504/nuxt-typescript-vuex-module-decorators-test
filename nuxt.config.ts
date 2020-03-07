@@ -47,6 +47,7 @@ const config: Configuration = {
    ** Build configuration
    */
   build: {
+    hardSource: process.env.NODE_ENV === 'development',
     babel: {
       plugins: [
         ['@babel/plugin-proposal-decorators', { legacy: true }],
