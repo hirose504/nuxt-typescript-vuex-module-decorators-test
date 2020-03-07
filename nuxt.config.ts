@@ -56,7 +56,11 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
-    extend(_config, _ctx) {}
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.devtool = '#source-map'
+      }
+    }
   }
 }
 
